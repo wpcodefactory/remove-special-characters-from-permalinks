@@ -20,14 +20,14 @@ Although it may not hurt you at first, it may let users confused and it can caus
 
 This plugin Removes special characters from permalinks.
 
-= How to use it? =
+== How to use it? ==
 
 All you have to do is saving/updating your post and you will notice special characters will be swiped out from the permalink.
 
 == Frequently Asked Questions ==
 
 = How can I contribute? Is there a github repository? =
-If you are interested in contributing - head over to the [Popup Notices for WooCommerce plugin GitHub Repository](https://github.com/thanks-to-it/remove-special-characters-from-permalinks) to find out how you can pitch in.
+If you are interested in contributing - head over to the [Remove Special Characters From Permalinks](https://github.com/thanks-to-it/remove-special-characters-from-permalinks) plugin GitHub Repository to find out how you can pitch in.
 
 == Installation ==
 
