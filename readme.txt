@@ -29,6 +29,9 @@ All you have to do is saving/updating your post and you will notice special char
 = How can I contribute? Is there a github repository? =
 If you are interested in contributing - head over to the [Remove Special Characters From Permalinks](https://github.com/thanks-to-it/remove-special-characters-from-permalinks) plugin GitHub Repository to find out how you can pitch in.
 
+= Link icon credits =
+Icon made by Freepik from [Flaticon](www.flaticon.com)
+
 == Installation ==
 
 1. Upload the entire 'remove-special-characters-from-permalinks' folder to the '/wp-content/plugins/' directory.
