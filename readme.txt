@@ -30,7 +30,7 @@ All you have to do is saving/updating your post and you will notice special char
 If you are interested in contributing - head over to the [Remove Special Characters From Permalinks](https://github.com/thanks-to-it/remove-special-characters-from-permalinks) plugin GitHub Repository to find out how you can pitch in.
 
 = Link icon credits =
-Link Icon made by Freepik from [Flaticon](www.flaticon.com)
+Link Icon made by Freepik from [Flaticon](https://www.flaticon.com)
 
 == Installation ==
 
