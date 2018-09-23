@@ -39,6 +39,10 @@ If you are interested in contributing - head over to the [Remove Special Charact
 
 == Changelog ==
 
+= 1.0.2 - 22/09/2018 =
+* Handle localization
+* Fix domain path
+
 = 1.0.1 - 22/09/2018 =
 * Handle localization
 
@@ -47,5 +51,6 @@ If you are interested in contributing - head over to the [Remove Special Charact
 
 == Upgrade Notice ==
 
-= 1.0.1 =
+= 1.0.2 =
 * Handle localization
+* Fix domain path
