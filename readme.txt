@@ -3,7 +3,7 @@ Contributors: karzin
 Tags: remove,special,problematic,characters,permalink,permalinks
 Requires at least: 4.4
 Tested up to: 4.9
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 Requires PHP: 5.6.0
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=pablo.sg.pacheco@gmail.com&lc=US&item_name=Remove+Special+Characters+From+Permalinks&no_note=0&no_shipping=2&curency_code=USD&bn=PP-DonationsBF:btn_donateCC_LG.gif:NonHosted
 License: GNU General Public License v3.0
@@ -30,9 +30,6 @@ All you have to do is saving/updating your post and you will notice special char
 = How can I contribute? Is there a github repository? =
 If you are interested in contributing - head over to the [Remove Special Characters From Permalinks](https://github.com/thanks-to-it/remove-special-characters-from-permalinks) plugin GitHub Repository to find out how you can pitch in.
 
-= Link icon credits =
-Link Icon made by Freepik from [Flaticon](https://www.flaticon.com)
-
 == Installation ==
 
 1. Upload the entire 'remove-special-characters-from-permalinks' folder to the '/wp-content/plugins/' directory.
@@ -42,10 +39,13 @@ Link Icon made by Freepik from [Flaticon](https://www.flaticon.com)
 
 == Changelog ==
 
+= 1.0.1 - 22/09/2018 =
+* Handle localization
+
 = 1.0.0 - 12/09/2018 =
 * Initial Release.
 
 == Upgrade Notice ==
 
-= 1.0.0 =
-* Initial Release.
+= 1.0.1 =
+* Handle localization
