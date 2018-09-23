@@ -2,7 +2,7 @@
 /**
  * Remove Special Characters From Permalinks - Core Class
  *
- * @version 1.0.0
+ * @version 1.0.1
  * @since   1.0.0
  * @author  Thanks to IT
  */
@@ -79,13 +79,14 @@ if ( ! class_exists( 'ThanksToIT\RSCFP\Core' ) ) {
 		/**
 		 * Initializes
 		 *
-		 * @version 1.0.0
+		 * @version 1.0.1
 		 * @since 1.0.0
 		 *
 		 * @return Core
 		 */
 		public function init() {
 			$this->set_admin();
+			$this->handle_localization();
 
 			// It's important to keep priority as 1
 			add_filter( 'sanitize_title', array( $this, 'remove_non_ascii_characters' ), 1 );
@@ -118,6 +119,22 @@ if ( ! class_exists( 'ThanksToIT\RSCFP\Core' ) ) {
 			// Add settings link on plugins page
 			//$path = $this->plugin_info['path'];
 			//add_filter( 'plugin_action_links_' . plugin_basename( $path ), array( $this, 'add_action_links' ) );
+		}
+
+		/**
+		 * Handle Localization
+		 *
+		 * @version 1.0.1
+		 * @since   1.0.1
+		 */
+		public function handle_localization(){
+			$domain = 'remove-special-characters-from-permalinks';
+			$locale = apply_filters( 'plugin_locale', get_locale(), $domain );
+			if ( $loaded = load_textdomain( $domain, trailingslashit( WP_LANG_DIR ) . 'plugins' . '/' . $domain . '/' . $domain . '-' . $locale . '.mo' ) ) {
+				return $loaded;
+			} else {
+				load_plugin_textdomain( $domain, false, dirname( plugin_basename( $this->plugin_info['path'] ) ) . '/src/languages/' );
+			}
 		}
 
 		/**
