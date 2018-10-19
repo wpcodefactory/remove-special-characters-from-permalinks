@@ -16,6 +16,7 @@ return array(
     'Composer\\Installers\\BonefishInstaller' => $vendorDir . '/composer/installers/src/Composer/Installers/BonefishInstaller.php',
     'Composer\\Installers\\CakePHPInstaller' => $vendorDir . '/composer/installers/src/Composer/Installers/CakePHPInstaller.php',
     'Composer\\Installers\\ChefInstaller' => $vendorDir . '/composer/installers/src/Composer/Installers/ChefInstaller.php',
+    'Composer\\Installers\\CiviCrmInstaller' => $vendorDir . '/composer/installers/src/Composer/Installers/CiviCrmInstaller.php',
     'Composer\\Installers\\ClanCatsFrameworkInstaller' => $vendorDir . '/composer/installers/src/Composer/Installers/ClanCatsFrameworkInstaller.php',
     'Composer\\Installers\\CockpitInstaller' => $vendorDir . '/composer/installers/src/Composer/Installers/CockpitInstaller.php',
     'Composer\\Installers\\CodeIgniterInstaller' => $vendorDir . '/composer/installers/src/Composer/Installers/CodeIgniterInstaller.php',
@@ -96,4 +97,10 @@ return array(
     'Composer\\Installers\\ZendInstaller' => $vendorDir . '/composer/installers/src/Composer/Installers/ZendInstaller.php',
     'Composer\\Installers\\ZikulaInstaller' => $vendorDir . '/composer/installers/src/Composer/Installers/ZikulaInstaller.php',
     'ThanksToIT\\RSCFP\\Core' => $baseDir . '/src/classes/class-core.php',
+    'ThanksToIT\\RSCFP\\Notices' => $baseDir . '/src/classes/class-notices.php',
+    'ThanksToIT\\WPAN\\Ajax' => $vendorDir . '/thanks-to-it/wp-admin-notices/src/classes/class-ajax.php',
+    'ThanksToIT\\WPAN\\Display_Rules' => $vendorDir . '/thanks-to-it/wp-admin-notices/src/classes/class-display-rules.php',
+    'ThanksToIT\\WPAN\\Javascript' => $vendorDir . '/thanks-to-it/wp-admin-notices/src/classes/class-javascript.php',
+    'ThanksToIT\\WPAN\\Notice' => $vendorDir . '/thanks-to-it/wp-admin-notices/src/classes/class-notice.php',
+    'ThanksToIT\\WPAN\\Notices_Manager' => $vendorDir . '/thanks-to-it/wp-admin-notices/src/classes/class-notices-manager.php',
 );

@@ -79,7 +79,7 @@ if ( ! class_exists( 'ThanksToIT\RSCFP\Core' ) ) {
 		/**
 		 * Initializes
 		 *
-		 * @version 1.0.1
+		 * @version 1.0.3
 		 * @since 1.0.0
 		 * @todo Take a look at utf8_uri_encode() on formatting.php
 		 *
@@ -88,9 +88,20 @@ if ( ! class_exists( 'ThanksToIT\RSCFP\Core' ) ) {
 		public function init() {
 			$this->set_admin();
 			$this->handle_localization();
+			$this->set_wp_admin_notices();
 
 			// It's important to keep priority as 1
 			add_filter( 'sanitize_title', array( $this, 'remove_non_ascii_characters' ), 1 );
+		}
+
+		/**
+		 * Sets admin
+		 * @version 1.0.3
+		 * @since 1.0.3
+		 */
+		private function set_wp_admin_notices() {
+			$notices = new Notices();
+			$notices->init();
 		}
 
 		/**

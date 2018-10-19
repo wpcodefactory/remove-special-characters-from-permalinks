@@ -6,6 +6,10 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit21216c61aaa60bb502e797389ff639ae
 {
+    public static $files = array (
+        '1609d6f3e293af2b810977796160a51d' => __DIR__ . '/..' . '/thanks-to-it/wp-admin-notices/src/functions/functions.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         'C' => 
         array (
@@ -31,6 +35,7 @@ class ComposerStaticInit21216c61aaa60bb502e797389ff639ae
         'Composer\\Installers\\BonefishInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/BonefishInstaller.php',
         'Composer\\Installers\\CakePHPInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/CakePHPInstaller.php',
         'Composer\\Installers\\ChefInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/ChefInstaller.php',
+        'Composer\\Installers\\CiviCrmInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/CiviCrmInstaller.php',
         'Composer\\Installers\\ClanCatsFrameworkInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/ClanCatsFrameworkInstaller.php',
         'Composer\\Installers\\CockpitInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/CockpitInstaller.php',
         'Composer\\Installers\\CodeIgniterInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/CodeIgniterInstaller.php',
@@ -111,6 +116,12 @@ class ComposerStaticInit21216c61aaa60bb502e797389ff639ae
         'Composer\\Installers\\ZendInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/ZendInstaller.php',
         'Composer\\Installers\\ZikulaInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/ZikulaInstaller.php',
         'ThanksToIT\\RSCFP\\Core' => __DIR__ . '/../..' . '/src/classes/class-core.php',
+        'ThanksToIT\\RSCFP\\Notices' => __DIR__ . '/../..' . '/src/classes/class-notices.php',
+        'ThanksToIT\\WPAN\\Ajax' => __DIR__ . '/..' . '/thanks-to-it/wp-admin-notices/src/classes/class-ajax.php',
+        'ThanksToIT\\WPAN\\Display_Rules' => __DIR__ . '/..' . '/thanks-to-it/wp-admin-notices/src/classes/class-display-rules.php',
+        'ThanksToIT\\WPAN\\Javascript' => __DIR__ . '/..' . '/thanks-to-it/wp-admin-notices/src/classes/class-javascript.php',
+        'ThanksToIT\\WPAN\\Notice' => __DIR__ . '/..' . '/thanks-to-it/wp-admin-notices/src/classes/class-notice.php',
+        'ThanksToIT\\WPAN\\Notices_Manager' => __DIR__ . '/..' . '/thanks-to-it/wp-admin-notices/src/classes/class-notices-manager.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
