@@ -25,6 +25,15 @@ This plugin Removes special characters from permalinks.
 
 All you have to do is saving/updating your post and you will notice special characters will be swiped out from the permalink.
 
+== Pro Version ==
+
+Enjoying the free version of this plugin?
+
+We have a Pro version that allows removing characters from all permalinks of your site with just one click, including posts, pages and custom post types.
+We also offer support if you have some sort of problem.
+
+[Update to PRO](https://wpfactory.com/item/remove-special-characters-from-permalinks-wordpress-plugin/) for a better plugin and helping maintaining the development of this plugin
+
 == Frequently Asked Questions ==
 
 = How can I contribute? Is there a github repository? =
@@ -39,8 +48,9 @@ If you are interested in contributing - head over to the [Remove Special Charact
 
 == Changelog ==
 
-= 1.0.3 - 18/10/2018 =
+= 1.0.3 - 19/10/2018 =
 * Check if permalink seems utf8 before removing characters
+* Inform about pro version
 
 = 1.0.2 - 22/09/2018 =
 * Handle localization
@@ -56,3 +66,4 @@ If you are interested in contributing - head over to the [Remove Special Charact
 
 = 1.0.3 =
 * Check if permalink seems utf8 before removing characters
+* Inform about pro version

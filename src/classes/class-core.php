@@ -127,13 +127,13 @@ if ( ! class_exists( 'ThanksToIT\RSCFP\Core' ) ) {
 
 		/**
 		 * Sets admin
-		 * @version 1.0.0
-		 * @since 1.0.0
+		 * @version 1.0.3
+		 * @since 1.0.3
 		 */
 		private function set_admin() {
 			// Add settings link on plugins page
-			//$path = $this->plugin_info['path'];
-			//add_filter( 'plugin_action_links_' . plugin_basename( $path ), array( $this, 'add_action_links' ) );
+			$path = $this->plugin_info['path'];
+			add_filter( 'plugin_action_links_' . plugin_basename( $path ), array( $this, 'add_action_links' ) );
 		}
 
 		/**
@@ -155,19 +155,19 @@ if ( ! class_exists( 'ThanksToIT\RSCFP\Core' ) ) {
 		/**
 		 * Adds action links
 		 *
-		 * @version 1.0.0
-		 * @since 1.0.0
+		 * @version 1.0.3
+		 * @since 1.0.3
 		 *
 		 * @param $links
 		 *
 		 * @return array
 		 */
-		/*public function add_action_links( $links ) {
+		public function add_action_links( $links ) {
 			$mylinks = array(
-				'<a href="' . admin_url( 'admin.php?page=wc-settings&tab=trswc' ) . '">Settings</a>',
+				'<a target="_blank" href="https://wpfactory.com/item/remove-special-characters-from-permalinks-wordpress-plugin/">' . __( 'Pro Version', 'remove-special-characters-from-permalinks' ) . '</a>',
 			);
 			return array_merge( $mylinks, $links );
-		}*/
+		}
 
 	}
 }
