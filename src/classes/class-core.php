@@ -2,7 +2,7 @@
 /**
  * Remove Special Characters From Permalinks - Core Class
  *
- * @version 1.0.1
+ * @version 1.0.3
  * @since   1.0.0
  * @author  Thanks to IT
  */
@@ -81,6 +81,7 @@ if ( ! class_exists( 'ThanksToIT\RSCFP\Core' ) ) {
 		 *
 		 * @version 1.0.1
 		 * @since 1.0.0
+		 * @todo Take a look at utf8_uri_encode() on formatting.php
 		 *
 		 * @return Core
 		 */
@@ -93,17 +94,20 @@ if ( ! class_exists( 'ThanksToIT\RSCFP\Core' ) ) {
 		}
 
 		/**
-		 * Removes nos ASCII characters
+		 * Removes non ASCII characters
 		 *
 		 * Excludes white spaces because WordPress handles it later replacing it with dashes
 		 *
-		 * @version 1.0.0
+		 * @version 1.0.3
 		 * @since 1.0.0
 		 *
 		 * @return Core
 		 */
 		public function remove_non_ascii_characters( $title ) {
-			if(!is_admin()){
+			if (
+				! is_admin() ||
+				! seems_utf8( $title )
+			) {
 				return $title;
 			}
 			$title = preg_replace( "/[^\sa-zA-Z0-9-_.]/", "", $title );
@@ -127,7 +131,7 @@ if ( ! class_exists( 'ThanksToIT\RSCFP\Core' ) ) {
 		 * @version 1.0.1
 		 * @since   1.0.1
 		 */
-		public function handle_localization(){
+		public function handle_localization() {
 			$domain = 'remove-special-characters-from-permalinks';
 			$locale = apply_filters( 'plugin_locale', get_locale(), $domain );
 			if ( $loaded = load_textdomain( $domain, trailingslashit( WP_LANG_DIR ) . 'plugins' . '/' . $domain . '/' . $domain . '-' . $locale . '.mo' ) ) {

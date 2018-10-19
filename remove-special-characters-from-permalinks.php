@@ -3,7 +3,7 @@
  * Plugin Name: Remove Special Characters From Permalinks
  * Plugin URI: https://wordpress.org/plugins/remove-special-characters-from-permalinks/
  * Description: Removes special characters from permalinks
- * Version: 1.0.2
+ * Version: 1.0.3
  * Author: Thanks to IT
  * Author URI: https://github.com/thanks-to-it
  * License: GNU General Public License v3.0
