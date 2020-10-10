@@ -2,8 +2,8 @@
 Contributors: karzin
 Tags: remove,special,problematic,characters,permalink,permalinks
 Requires at least: 4.4
-Tested up to: 4.9
-Stable tag: 1.0.3
+Tested up to: 5.5
+Stable tag: 1.0.4
 Requires PHP: 5.6.0
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=pablo.sg.pacheco@gmail.com&lc=US&item_name=Remove+Special+Characters+From+Permalinks&no_note=0&no_shipping=2&curency_code=USD&bn=PP-DonationsBF:btn_donateCC_LG.gif:NonHosted
 License: GNU General Public License v3.0
@@ -19,7 +19,7 @@ However some of these characters are not sanitized by default, meaning they can 
 
 Although it may not hurt you at first, it may let users confused and it can cause some problems when interacting with some third party API that is not prepared to read such characters.
 
-This plugin Removes special characters from permalinks.
+This plugin Removes special characters from permalinks when the post is created or updated.
 
 == How to use it? ==
 
@@ -48,6 +48,11 @@ If you are interested in contributing - head over to the [Remove Special Charact
 
 == Changelog ==
 
+= 1.0.4 - 10/10/2020 =
+* Replace `sanitize_title` by 'save_post' hook.
+* Improve special characters replacing function.
+* Tested up to: 5.5
+
 = 1.0.3 - 19/10/2018 =
 * Check if permalink seems utf8 before removing characters
 * Inform about pro version
@@ -64,6 +69,7 @@ If you are interested in contributing - head over to the [Remove Special Charact
 
 == Upgrade Notice ==
 
-= 1.0.3 =
-* Check if permalink seems utf8 before removing characters
-* Inform about pro version
+= 1.0.4 =
+* Replace `sanitize_title` by 'save_post' hook.
+* Improve special characters replacing function.
+* Tested up to: 5.5

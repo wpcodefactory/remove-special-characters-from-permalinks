@@ -2,7 +2,7 @@
 /**
  * Remove Special Characters From Permalinks - Core Class
  *
- * @version 1.0.3
+ * @version 1.0.4
  * @since   1.0.0
  * @author  Thanks to IT
  */
@@ -90,8 +90,7 @@ if ( ! class_exists( 'ThanksToIT\RSCFP\Core' ) ) {
 			$this->handle_localization();
 			$this->set_wp_admin_notices();
 
-			// It's important to keep priority as 1
-			add_filter( 'sanitize_title', array( $this, 'remove_non_ascii_characters' ), 1 );
+			add_action( 'save_post', array( $this, 'remove_non_ascii_characters' ), 10, 2 );
 		}
 
 		/**
@@ -107,22 +106,31 @@ if ( ! class_exists( 'ThanksToIT\RSCFP\Core' ) ) {
 		/**
 		 * Removes non ASCII characters
 		 *
-		 * Excludes white spaces because WordPress handles it later replacing it with dashes
-		 *
-		 * @version 1.0.3
+		 * @version 1.0.4
 		 * @since 1.0.0
 		 *
 		 * @return Core
 		 */
-		public function remove_non_ascii_characters( $title ) {
-			if (
-				! is_admin() ||
-				! seems_utf8( $title )
-			) {
-				return $title;
-			}
-			$title = preg_replace( "/[^\sa-zA-Z0-9-_.]/", "", $title );
-			return $title;
+		public function remove_non_ascii_characters( $post_id, $post ) {
+			if ( preg_match( "/a-zA-Z0-9-_./i", urldecode( $post->post_name ) ) ) {
+				return;
+			};
+			// unhook this function to prevent infinite looping
+			remove_action( 'save_post', array( $this, 'remove_non_ascii_characters' ) );
+			$site_url            = trailingslashit( get_home_url() );
+			$post_permalink_full = get_permalink( $post_id );
+			$post_permalink      = untrailingslashit( str_replace( $site_url, '', $post_permalink_full ) );
+			update_post_meta( $post_id, '_trscfp_original_post_name', $post_permalink );
+			$url_decoded   = urldecode( $post->post_name );
+			$new_post_name = remove_accents( $url_decoded );
+			$new_post_name = preg_replace( "/[^a-zA-Z0-9-_.]/", "", $new_post_name );
+			$new_post_name = sanitize_title_with_dashes( $new_post_name );
+			wp_update_post( array(
+				'ID'        => $post_id,
+				'post_name' => $new_post_name
+			) );
+			// re-hook this function
+			add_action( 'save_post', array( $this, 'remove_non_ascii_characters' ), 10, 2 );
 		}
 
 		/**
