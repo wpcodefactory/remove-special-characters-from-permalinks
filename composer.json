@@ -1,6 +1,5 @@
 {
   "name": "thanks-to-it/remove-special-characters-from-permalinks",
-  "type": "wordpress-plugin",
   "description": "Removes special characters from permalinks",
   "keywords": [
     "wordpress",
@@ -20,17 +19,7 @@
     "optimize-autoloader": true
   },
   "require": {
-    "php": ">=5.3.2",
-    "composer/installers": ">=v1.2.0",
     "thanks-to-it/wp-admin-notices": "dev-master"
-  },
-  "extra": {
-    "installer-paths": {
-      "vendor/{$vendor}/{$name}": [
-        "type:wordpress-plugin",
-        "type:wordpress-muplugin"
-      ]
-    }
   },
   "autoload": {
     "classmap": [
