@@ -3,7 +3,7 @@ Contributors: karzin
 Tags: remove,special,problematic,characters,permalink,permalinks
 Requires at least: 4.4
 Tested up to: 5.6
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 Requires PHP: 5.6.0
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=pablo.sg.pacheco@gmail.com&lc=US&item_name=Remove+Special+Characters+From+Permalinks&no_note=0&no_shipping=2&curency_code=USD&bn=PP-DonationsBF:btn_donateCC_LG.gif:NonHosted
 License: GNU General Public License v3.0
