@@ -2,7 +2,7 @@
 /**
  * Remove Special Characters From Permalinks - Core Class
  *
- * @version 1.0.4
+ * @version 1.0.5
  * @since   1.0.0
  * @author  Thanks to IT
  */
@@ -79,8 +79,8 @@ if ( ! class_exists( 'ThanksToIT\RSCFP\Core' ) ) {
 		/**
 		 * Initializes
 		 *
-		 * @version 1.0.3
-		 * @since 1.0.0
+		 * @version 1.0.5
+		 * @since   1.0.0
 		 * @todo Take a look at utf8_uri_encode() on formatting.php
 		 *
 		 * @return Core
@@ -89,8 +89,39 @@ if ( ! class_exists( 'ThanksToIT\RSCFP\Core' ) ) {
 			$this->set_admin();
 			$this->handle_localization();
 			$this->set_wp_admin_notices();
+			add_filter( 'wp_insert_post_data', array( $this, 'insert_post_data' ), 10, 3 );
+		}
 
-			add_action( 'save_post', array( $this, 'remove_non_ascii_characters' ), 10, 2 );
+		/**
+		 * insert_post_data.
+		 *
+		 * @version 1.0.5
+		 * @since   1.0.5
+		 *
+		 * @param $data
+		 * @param $postarr
+		 * @param $unsanitized_postarr
+		 *
+		 * @return mixed
+		 */
+		function insert_post_data( $data, $postarr, $unsanitized_postarr ) {
+			if (
+				empty( $post_id = isset( $postarr['ID'] ) ? $postarr['ID'] : ( isset( $postarr['post_ID'] ) ? $postarr['post_ID'] : null ) )
+				|| 'revision' == $postarr['post_type']
+				|| ! preg_match( "/[^a-zA-Z0-9\-\_.]/i", urldecode( $data['post_name'] ) )
+			) {
+				return $data;
+			}
+			$site_url            = trailingslashit( get_home_url() );
+			$post_permalink_full = get_permalink( $post_id );
+			$post_permalink      = untrailingslashit( str_replace( $site_url, '', $post_permalink_full ) );
+			update_post_meta( $post_id, '_trscfp_original_post_name', $post_permalink );
+			$url_decoded       = urldecode( $data['post_name'] );
+			$new_post_name     = remove_accents( $url_decoded );
+			$new_post_name     = preg_replace( "/[^a-zA-Z0-9\-\_.]/", "", $new_post_name );
+			$new_post_name     = sanitize_title_with_dashes( $new_post_name );
+			$data['post_name'] = $new_post_name;
+			return $data;
 		}
 
 		/**
@@ -101,36 +132,6 @@ if ( ! class_exists( 'ThanksToIT\RSCFP\Core' ) ) {
 		private function set_wp_admin_notices() {
 			$notices = new Notices();
 			$notices->init();
-		}
-
-		/**
-		 * Removes non ASCII characters
-		 *
-		 * @version 1.0.4
-		 * @since 1.0.0
-		 *
-		 * @return Core
-		 */
-		public function remove_non_ascii_characters( $post_id, $post ) {
-			if ( preg_match( "/a-zA-Z0-9-_./i", urldecode( $post->post_name ) ) ) {
-				return;
-			};
-			// unhook this function to prevent infinite looping
-			remove_action( 'save_post', array( $this, 'remove_non_ascii_characters' ) );
-			$site_url            = trailingslashit( get_home_url() );
-			$post_permalink_full = get_permalink( $post_id );
-			$post_permalink      = untrailingslashit( str_replace( $site_url, '', $post_permalink_full ) );
-			update_post_meta( $post_id, '_trscfp_original_post_name', $post_permalink );
-			$url_decoded   = urldecode( $post->post_name );
-			$new_post_name = remove_accents( $url_decoded );
-			$new_post_name = preg_replace( "/[^a-zA-Z0-9-_.]/", "", $new_post_name );
-			$new_post_name = sanitize_title_with_dashes( $new_post_name );
-			wp_update_post( array(
-				'ID'        => $post_id,
-				'post_name' => $new_post_name
-			) );
-			// re-hook this function
-			add_action( 'save_post', array( $this, 'remove_non_ascii_characters' ), 10, 2 );
 		}
 
 		/**
