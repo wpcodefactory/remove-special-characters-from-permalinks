@@ -36,7 +36,7 @@ We also offer support if you have some sort of problem.
 == Frequently Asked Questions ==
 
 = How can I contribute? Is there a github repository? =
-If you are interested in contributing - head over to the [Remove Special Characters From Permalinks](https://github.com/thanks-to-it/remove-special-characters-from-permalinks) plugin GitHub Repository to find out how you can pitch in.
+If you are interested in contributing - head over to the [Remove Special Characters From Permalinks](https://github.com/wpcodefactory/remove-special-characters-from-permalinks) plugin GitHub Repository to find out how you can pitch in.
 
 == Installation ==
 
