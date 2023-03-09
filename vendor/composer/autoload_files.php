@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    '1609d6f3e293af2b810977796160a51d' => $vendorDir . '/thanks-to-it/wp-admin-notices/src/functions/functions.php',
+    '20872bbaff0e3115cc7db5ab4a7d607e' => $vendorDir . '/wpfactory/wpfactory-promoting-notice/src/php/functions.php',
 );

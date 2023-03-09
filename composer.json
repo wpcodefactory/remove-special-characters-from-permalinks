@@ -13,8 +13,14 @@
     "preferred-install": "dist",
     "optimize-autoloader": true
   },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/wpcodefactory/wpfactory-promoting-notice"
+    }
+  ],
   "require": {
-    "thanks-to-it/wp-admin-notices": "dev-master"
+    "wpfactory/wpfactory-promoting-notice": "*"
   },
   "autoload": {
     "classmap": [

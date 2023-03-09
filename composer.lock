@@ -4,225 +4,42 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4acae7695394fbe2b402e3f81ee9eb9c",
+    "content-hash": "29c348ec9dbea474d049d423cc528978",
     "packages": [
         {
-            "name": "composer/installers",
-            "version": "v2.2.0",
+            "name": "wpfactory/wpfactory-promoting-notice",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/composer/installers.git",
-                "reference": "c29dc4b93137acb82734f672c37e029dfbd95b35"
+                "url": "https://github.com/wpcodefactory/wpfactory-promoting-notice.git",
+                "reference": "4d248f9ec4755fe6a8fc5ac0e67a098ac6e01f37"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/c29dc4b93137acb82734f672c37e029dfbd95b35",
-                "reference": "c29dc4b93137acb82734f672c37e029dfbd95b35",
+                "url": "https://api.github.com/repos/wpcodefactory/wpfactory-promoting-notice/zipball/4d248f9ec4755fe6a8fc5ac0e67a098ac6e01f37",
+                "reference": "4d248f9ec4755fe6a8fc5ac0e67a098ac6e01f37",
                 "shasum": ""
             },
-            "require": {
-                "composer-plugin-api": "^1.0 || ^2.0",
-                "php": "^7.2 || ^8.0"
-            },
-            "require-dev": {
-                "composer/composer": "1.6.* || ^2.0",
-                "composer/semver": "^1 || ^3",
-                "phpstan/phpstan": "^0.12.55",
-                "phpstan/phpstan-phpunit": "^0.12.16",
-                "symfony/phpunit-bridge": "^5.3",
-                "symfony/process": "^5"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "Composer\\Installers\\Plugin",
-                "branch-alias": {
-                    "dev-main": "2.x-dev"
-                },
-                "plugin-modifies-install-path": true
-            },
-            "autoload": {
-                "psr-4": {
-                    "Composer\\Installers\\": "src/Composer/Installers"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Kyle Robinson Young",
-                    "email": "kyle@dontkry.com",
-                    "homepage": "https://github.com/shama"
-                }
-            ],
-            "description": "A multi-framework Composer library installer",
-            "homepage": "https://composer.github.io/installers/",
-            "keywords": [
-                "Dolibarr",
-                "Eliasis",
-                "Hurad",
-                "ImageCMS",
-                "Kanboard",
-                "Lan Management System",
-                "MODX Evo",
-                "MantisBT",
-                "Mautic",
-                "Maya",
-                "OXID",
-                "Plentymarkets",
-                "Porto",
-                "RadPHP",
-                "SMF",
-                "Starbug",
-                "Thelia",
-                "Whmcs",
-                "WolfCMS",
-                "agl",
-                "annotatecms",
-                "attogram",
-                "bitrix",
-                "cakephp",
-                "chef",
-                "cockpit",
-                "codeigniter",
-                "concrete5",
-                "croogo",
-                "dokuwiki",
-                "drupal",
-                "eZ Platform",
-                "elgg",
-                "expressionengine",
-                "fuelphp",
-                "grav",
-                "installer",
-                "itop",
-                "known",
-                "kohana",
-                "laravel",
-                "lavalite",
-                "lithium",
-                "magento",
-                "majima",
-                "mako",
-                "matomo",
-                "mediawiki",
-                "miaoxing",
-                "modulework",
-                "modx",
-                "moodle",
-                "osclass",
-                "pantheon",
-                "phpbb",
-                "piwik",
-                "ppi",
-                "processwire",
-                "puppet",
-                "pxcms",
-                "reindex",
-                "roundcube",
-                "shopware",
-                "silverstripe",
-                "sydes",
-                "sylius",
-                "tastyigniter",
-                "wordpress",
-                "yawik",
-                "zend",
-                "zikula"
-            ],
-            "support": {
-                "issues": "https://github.com/composer/installers/issues",
-                "source": "https://github.com/composer/installers/tree/v2.2.0"
-            },
-            "funding": [
-                {
-                    "url": "https://packagist.com",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/composer",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2022-08-20T06:45:11+00:00"
-        },
-        {
-            "name": "thanks-to-it/wp-admin-notices",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thanks-to-it/wp-admin-notices.git",
-                "reference": "261d06ff2b6778b0d7b10ba3da1742f254ac282d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thanks-to-it/wp-admin-notices/zipball/261d06ff2b6778b0d7b10ba3da1742f254ac282d",
-                "reference": "261d06ff2b6778b0d7b10ba3da1742f254ac282d",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": ">=v1.2.0",
-                "php": ">=5.3.2"
-            },
-            "default-branch": true,
             "type": "library",
-            "extra": {
-                "installer-paths": {
-                    "vendor/{$vendor}/{$name}": [
-                        "type:wordpress-plugin",
-                        "type:wordpress-muplugin"
-                    ]
-                }
-            },
             "autoload": {
-                "files": [
-                    "src/functions/functions.php"
-                ],
                 "classmap": [
-                    "src/classes/"
+                    "src/php/"
                 ],
-                "exclude-from-classmap": [
-                    "/Tests/",
-                    "/test/",
-                    "/tests/",
-                    "wp-admin-notices.php"
+                "files": [
+                    "src/php/functions.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Pablo Pacheco",
-                    "email": "pablo.sg.pacheco@gmail.com"
-                }
-            ],
-            "description": "Manage WordPress Admin Notices easily",
-            "keywords": [
-                "admin",
-                "notice",
-                "notices",
-                "wordpress"
-            ],
             "support": {
-                "issues": "https://github.com/thanks-to-it/wp-admin-notices/issues",
-                "source": "https://github.com/thanks-to-it/wp-admin-notices/tree/master"
+                "source": "https://github.com/wpcodefactory/wpfactory-promoting-notice/tree/1.0.5",
+                "issues": "https://github.com/wpcodefactory/wpfactory-promoting-notice/issues"
             },
-            "time": "2019-02-21T22:45:19+00:00"
+            "time": "2021-06-07T20:53:39+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "thanks-to-it/wp-admin-notices": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

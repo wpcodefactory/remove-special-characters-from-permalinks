@@ -47,7 +47,8 @@ If you are interested in contributing - head over to the [Remove Special Charact
 
 == Changelog ==
 
-= 1.0.6 - 08/03/2023 =
+= 1.0.6 - 09/03/2023 =
+* Dev - Improve notice.
 * Tested up to: 6.1.
 * Move to WPFactory.
 
