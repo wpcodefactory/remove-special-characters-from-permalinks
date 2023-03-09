@@ -4,16 +4,16 @@
  *
  * @version 1.0.5
  * @since   1.0.0
- * @author  Thanks to IT
+ * @author  WPFactory
  */
 
-namespace ThanksToIT\RSCFP;
+namespace WPFactory\RSCFP;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 } // Exit if accessed directly
 
-if ( ! class_exists( 'ThanksToIT\RSCFP\Core' ) ) {
+if ( ! class_exists( 'WPFactory\RSCFP\Core' ) ) {
 
 	class Core {
 

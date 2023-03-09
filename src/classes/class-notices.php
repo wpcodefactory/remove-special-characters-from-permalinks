@@ -4,16 +4,16 @@
  *
  * @version 1.0.3
  * @since   1.0.3
- * @author  Thanks to IT
+ * @author  WPFactory
  */
 
-namespace ThanksToIT\RSCFP;
+namespace WPFactory\RSCFP;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 } // Exit if accessed directly
 
-if ( ! class_exists( 'ThanksToIT\RSCFP\Notices' ) ) {
+if ( ! class_exists( 'WPFactory\RSCFP\Notices' ) ) {
 
 	class Notices {
 		public function init() {

@@ -2,8 +2,8 @@
 Contributors: karzin
 Tags: remove,special,problematic,characters,permalink,permalinks
 Requires at least: 4.4
-Tested up to: 5.6
-Stable tag: 1.0.5
+Tested up to: 6.1
+Stable tag: 1.0.6
 Requires PHP: 5.6.0
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=pablo.sg.pacheco@gmail.com&lc=US&item_name=Remove+Special+Characters+From+Permalinks&no_note=0&no_shipping=2&curency_code=USD&bn=PP-DonationsBF:btn_donateCC_LG.gif:NonHosted
 License: GNU General Public License v3.0
@@ -47,6 +47,10 @@ If you are interested in contributing - head over to the [Remove Special Charact
 == Screenshots ==
 
 == Changelog ==
+
+= 1.0.6 - 08/03/2023 =
+* Tested up to: 6.1.
+* Move to WPFactory.
 
 = 1.0.5 - 22/12/2020 =
 * Fix markdown getting lost on post update.

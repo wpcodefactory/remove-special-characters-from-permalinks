@@ -2,14 +2,15 @@
 /**
  * Plugin Name: Remove Special Characters From Permalinks
  * Plugin URI: https://wordpress.org/plugins/remove-special-characters-from-permalinks/
- * Description: Removes special characters from permalinks
- * Version: 1.0.5
- * Author: Thanks to IT
- * Author URI: https://github.com/thanks-to-it
+ * Description: Removes special characters from permalinks.
+ * Version: 1.0.6
+ * Author: WPFactory
+ * Author URI: https://wpfactory.com
  * License: GNU General Public License v3.0
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain: remove-special-characters-from-permalinks
  * Domain Path: /src/languages
+ * Copyright: © 2023 WPFactory
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -18,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 require_once "vendor/autoload.php";
 
-$plugin = \ThanksToIT\RSCFP\Core::instance();
+$plugin = \WPFactory\RSCFP\Core::instance();
 $plugin->setup( array(
 	'path' => __FILE__
 ) );

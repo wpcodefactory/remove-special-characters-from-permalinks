@@ -4,7 +4,7 @@
  * Plugin URI: https://github.com/thanks-to-it/wp-admin-notices
  * Description: Display WordPress Admin Notices easily
  * Version: 1.0.0
- * Author: Thanks to IT
+ * Author: WPFactory
  * Author URI: https://github.com/thanks-to-it
  * License: GNU General Public License v3.0
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
