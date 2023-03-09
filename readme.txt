@@ -5,7 +5,6 @@ Requires at least: 4.4
 Tested up to: 6.1
 Stable tag: 1.0.6
 Requires PHP: 5.6.0
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=pablo.sg.pacheco@gmail.com&lc=US&item_name=Remove+Special+Characters+From+Permalinks&no_note=0&no_shipping=2&curency_code=USD&bn=PP-DonationsBF:btn_donateCC_LG.gif:NonHosted
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
