@@ -2,7 +2,7 @@
 /**
  * WPFactory Promoting Notice - Functions.
  *
- * @version 1.0.5
+ * @version 1.0.6
  * @since   1.0.0
  * @author  WPFactory
  */
@@ -89,7 +89,7 @@ if ( ! class_exists( 'WPFactory\Promoting_Notice' ) ) {
 		/**
 		 * init.
 		 *
-		 * @version 1.0.4
+		 * @version 1.0.6
 		 * @since   1.0.0
 		 */
 		function init() {

@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "wpfactory/wpfactory-promoting-notice",
-            "version": "1.0.5",
+            "version": "v1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wpcodefactory/wpfactory-promoting-notice.git",
-                "reference": "4d248f9ec4755fe6a8fc5ac0e67a098ac6e01f37"
+                "reference": "9b0dc91c32662ce9040b36a4b40827454e806856"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wpcodefactory/wpfactory-promoting-notice/zipball/4d248f9ec4755fe6a8fc5ac0e67a098ac6e01f37",
-                "reference": "4d248f9ec4755fe6a8fc5ac0e67a098ac6e01f37",
+                "url": "https://api.github.com/repos/wpcodefactory/wpfactory-promoting-notice/zipball/9b0dc91c32662ce9040b36a4b40827454e806856",
+                "reference": "9b0dc91c32662ce9040b36a4b40827454e806856",
                 "shasum": ""
             },
             "type": "library",
@@ -30,10 +30,10 @@
                 ]
             },
             "support": {
-                "source": "https://github.com/wpcodefactory/wpfactory-promoting-notice/tree/1.0.5",
+                "source": "https://github.com/wpcodefactory/wpfactory-promoting-notice/tree/v1.0.6",
                 "issues": "https://github.com/wpcodefactory/wpfactory-promoting-notice/issues"
             },
-            "time": "2021-06-07T20:53:39+00:00"
+            "time": "2023-03-09T14:03:49+00:00"
         }
     ],
     "packages-dev": [],
@@ -44,5 +44,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.3.0"
 }
