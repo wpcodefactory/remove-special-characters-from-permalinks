@@ -1,9 +1,9 @@
 === Remove Special Characters From Permalinks ===
 Contributors: wpcodefactory, omardabbas, karzin, anbinder, kousikmukherjeeli
-Tags: remove, special, problematic, characters, permalink, permalinks
+Tags: remove, special, characters, permalink
 Requires at least: 4.4
 Tested up to: 7.0
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 Requires PHP: 5.6.0
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -46,6 +46,10 @@ If you are interested in contributing - head over to the [Remove Special Charact
 == Screenshots ==
 
 == Changelog ==
+
+= 1.1.2 - 29/09/2026 =
+* Dev - Code refactoring (PHPCS fixes).
+* Tested up to: 7.1.
 
 = 1.1.1 - 24/05/2026 =
 * Tested up to: 7.0.

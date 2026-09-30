@@ -3,7 +3,7 @@
  * Plugin Name: Remove Special Characters From Permalinks
  * Plugin URI: https://wordpress.org/plugins/remove-special-characters-from-permalinks/
  * Description: Removes special characters from permalinks.
- * Version: 1.1.1
+ * Version: 1.1.2
  * Author: WPFactory
  * Author URI: https://wpfactory.com
  * License: GNU General Public License v3.0
@@ -20,13 +20,13 @@ if ( ! function_exists( 'trscfp_is_plugin_active' ) ) {
 	/**
 	 * trscfp_is_plugin_active.
 	 *
-	 * @version 1.0.6
+	 * @version 1.1.2
 	 * @since   1.0.6
 	 */
 	function trscfp_is_plugin_active( $plugin ) {
 		return ( function_exists( 'is_plugin_active' ) ? is_plugin_active( $plugin ) :
 			(
-				in_array( $plugin, apply_filters( 'active_plugins', ( array ) get_option( 'active_plugins', array() ) ) ) ||
+				in_array( $plugin, apply_filters( 'active_plugins', ( array ) get_option( 'active_plugins', array() ) ) ) || // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- Legacy WP core filter; prefixing it would break compatibility.
 				( is_multisite() && array_key_exists( $plugin, ( array ) get_site_option( 'active_sitewide_plugins', array() ) ) )
 			)
 		);
@@ -55,17 +55,15 @@ if ( true === apply_filters( 'trscfp_init', true ) ) {
 }
 
 // Custom deactivation/activation hooks.
-$activation_hook   = 'trscfp_on_activation';
-$deactivation_hook = 'trscfp_on_deactivation';
-register_activation_hook( __FILE__, function () use ( $activation_hook ) {
-	add_option( $activation_hook, 'yes' );
+register_activation_hook( __FILE__, function () {
+	add_option( 'trscfp_on_activation', 'yes' );
 } );
-register_deactivation_hook( __FILE__, function () use ( $deactivation_hook ) {
-	do_action( $deactivation_hook );
+register_deactivation_hook( __FILE__, function () {
+	do_action( 'trscfp_on_deactivation' );
 } );
-add_action( 'admin_init', function () use ( $activation_hook ) {
-	if ( is_admin() && get_option( $activation_hook ) === 'yes' ) {
-		delete_option( $activation_hook );
-		do_action( $activation_hook );
+add_action( 'admin_init', function () {
+	if ( is_admin() && 'yes' === get_option( 'trscfp_on_activation' ) ) {
+		delete_option( 'trscfp_on_activation' );
+		do_action( 'trscfp_on_activation' );
 	}
 } );

@@ -2,7 +2,7 @@
 /**
  * Remove Special Characters From Permalinks - Core Class
  *
- * @version 1.0.5
+ * @version 1.1.2
  * @since   1.0.0
  * @author  WPFactory
  */
@@ -148,12 +148,12 @@ if ( ! class_exists( 'WPFactory\RSCFP\Core' ) ) {
 		/**
 		 * Handle Localization
 		 *
-		 * @version 1.0.1
+		 * @version 1.1.2
 		 * @since   1.0.1
 		 */
 		public function handle_localization() {
 			$domain = 'remove-special-characters-from-permalinks';
-			$locale = apply_filters( 'plugin_locale', get_locale(), $domain );
+			$locale = apply_filters( 'plugin_locale', get_locale(), $domain ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- WP core filter; prefixing it would break localization compatibility.
 			if ( $loaded = load_textdomain( $domain, trailingslashit( WP_LANG_DIR ) . 'plugins' . '/' . $domain . '/' . $domain . '-' . $locale . '.mo' ) ) {
 				return $loaded;
 			} else {
